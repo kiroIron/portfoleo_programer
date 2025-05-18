@@ -17,7 +17,14 @@ navLinks.forEach((link) => {
     event.target.classList.add("active");
   });
 });
+// toggle icon navbar//
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("fa-xmark");
+  navbar.classList.toggle("active");
+};
 // Scroll event: Update active link based on the section in view
 window.addEventListener("scroll", () => {
   sections.forEach((sec) => {
@@ -38,4 +45,9 @@ window.addEventListener("scroll", () => {
       });
     }
   });
+  let header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 100);
+  //============== remove toggle icon and navbar when click navbar link (scroll)========//
+  menuIcon.classList.remove("fa-xmark");
+  navbar.classList.remove("active");
 });
