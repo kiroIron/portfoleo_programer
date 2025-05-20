@@ -51,3 +51,19 @@ window.addEventListener("scroll", () => {
   menuIcon.classList.remove("fa-xmark");
   navbar.classList.remove("active");
 });
+
+// *=========== scroll reveal ==========*//
+ScrollReveal({
+  reset: true,
+  distance: "80px",
+  duration: 2000,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".home_content, .heading", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-img, .services_container, .portfolio-box, .contact ",
+  { origin: "bottom" }
+);
+ScrollReveal().reveal(" .home_content h1, .about-img", { origin: "left" });
+ScrollReveal().reveal(" .home_content p, .about-content", { origin: "right" });

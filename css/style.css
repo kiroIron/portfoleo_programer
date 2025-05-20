@@ -109,13 +109,25 @@ body {
 
 .home-img img {
   width: 400px;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1;
   margin-right: -20px;
   opacity: 0;
   object-fit: cover;
   object-position: center;
   animation: zoomIn 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 2s; */
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .social-media a {
   display: inline-flex;
